@@ -46,7 +46,7 @@ public class SetDeTenis {
         
         // Problema 7: Si ambos son iguales, el partido no ha terminado
         if (numVictoriasA == numVictoriasB) {
-            return "El partido no ha terminado";
+            return "Aún no termina";
         }
         
         // Problema 8: Si el resultado es 5 - 7 o 7 - 5
@@ -69,7 +69,7 @@ public class SetDeTenis {
         }
         
         // Si ninguno de los problemas anteriores se ha encontrado, el juego está en progreso
-        return "Aun no termina";
+        return "Aún no termina";
     }
    
     public static void main(String[] args) {
