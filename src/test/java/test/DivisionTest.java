@@ -18,10 +18,18 @@ public class DivisionTest {
     public void testDivisionExacta() {
         String valorEsperado = "La división es exacta. \n"
                 + "Cociente: 2\n"
-                + "Residuo: 4";
-        String valorActual = Division.evaluar(14, 5);
+                + "Residuo: 0";
+        String valorActual = Division.evaluar(14, 7);
         assertEquals(valorEsperado, valorActual);
     }
     
+    @Test
+    public void testDivisionNoExacta() {
+        String valorEsperado = "La división no es exacta. \n"
+                + "Cociente: 0\n"
+                + "Residuo: 1";
+        String valorActual = Division.evaluar(1, 4);
+        assertEquals(valorEsperado, valorActual);
+    }
     // TODO: Agrega tus otros casos de prueba aquí
 }
