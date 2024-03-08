@@ -15,8 +15,24 @@ import static org.junit.jupiter.api.Assertions.*;
 public class LetraONumeroTest {
     @Test
     public void testEsNumero() {
-        String valorEsperado = "Es número";
+        String valorEsperado = "El caracter ingresado es un número.";
+        String valorActual = LetraONumero.evaluar('5');
+        assertEquals(valorEsperado, valorActual);
+    }@Test
+    public void testEsLetraMinuscula() {
+        String valorEsperado = "El caracter ingresado es una letra minúscula.";
         String valorActual = LetraONumero.evaluar('c');
+        assertEquals(valorEsperado, valorActual);
+    }
+    @Test
+    public void testEsletraMayuscula() {
+        String valorEsperado = "El caracter ingresado es una letra mayúscula.";
+        String valorActual = LetraONumero.evaluar('G');
+        assertEquals(valorEsperado, valorActual);
+    }@Test
+    public void testNoEsLetraNiNumero() {
+        String valorEsperado = "El caracter ingresado no es ni letra ni número.";
+        String valorActual = LetraONumero.evaluar('$');
         assertEquals(valorEsperado, valorActual);
     }
     
